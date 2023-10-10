@@ -15,9 +15,10 @@ export default{
 </script>
 
 <template>
- 
+  <Header></Header>
 </template>
 
-<style>
+<style lang="scss">
+@use './sass/main.scss';
 
 </style>
