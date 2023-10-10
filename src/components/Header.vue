@@ -1,14 +1,13 @@
 <script >
 
-import {menuPersone, menuIcons} from '../data/menuHeader';
+import menuHeader from '../data/menuHeader';
 
 
 export default{
   name:'Header',
   data(){
     return {
-      menuPersone,
-      menuIcons
+      menuHeader
     }
   }
   
@@ -25,7 +24,7 @@ export default{
 
       <nav>
           <ul>
-            <li v-for="item in menuPersone">
+            <li v-for="item in menuHeader">
               <a :href="item.href">{{ item.text }}</a>
             </li>
           </ul>
@@ -76,22 +75,24 @@ header{
     height: 100%;
     align-items: center;
 
-    nav{
-      ul{
-        align-items: center;
-        li{
-          list-style: none;
-          color: white;
-          font-weight: bold;
-          display: inline-block;
-          cursor: pointer; 
-          padding-left: 10px; 
-
-          &hover{
-            text-decoration: underline;
-          }
+      nav{
+        ul{
+          align-items: center;
+          li{
+            display: inline-block;
+            cursor: pointer; 
+            
+            a{ 
+            list-style: none;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            padding-left: 10px; 
+            }
           
 
+          }
+        
         }
       }
     }
@@ -121,7 +122,7 @@ header{
 
   
   
-}
+
 
 
 
