@@ -48,6 +48,48 @@ export default{
   </header>
 </template>
 
-<style>
+<style lang="scss" scoped>
+
+@use '../sass/partials/variabiles' as *;
+
+header{
+  background-color: $orange-color;
+  z-index: 999;
+  position: fixed;
+  box-shadow: 0 0 10px 0 gray;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+
+  div{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    nav{
+      ul{
+        align-items: center;
+        li{
+          list-style: none;
+          color: white;
+          font-weight: bold;
+          display: inline-block;
+          cursor: pointer; 
+          padding-left: 10px; 
+          
+
+        }
+      }
+    }
+    }
+
+  
+  
+}
+
+
+
 
 </style>
