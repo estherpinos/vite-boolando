@@ -1,8 +1,16 @@
 <script >
 
+import {menuPersone, menuIcons} from '../data/menuHeader';
+
 
 export default{
   name:'Header',
+  data(){
+    return {
+      menuPersone,
+      menuIcons
+    }
+  }
   
 }
 
@@ -10,34 +18,34 @@ export default{
 
 
 <template>
-  <header class="top-bar-fix">
-     <div class="container" id="container-header">
+  <header>
+     <div class="container">
 
       <!-- MENU -->
 
-      <nav class="menu">
+      <nav>
           <ul>
-            <li>Donna</li>
-            <li>Uomo</li>
-            <li>Bambini</li>
+            <li v-for="item in menuPersone">
+              <a :href="item.href">{{ item.text }}</a>
+            </li>
           </ul>
         </nav>
 
         <!-- LOGO BOOLEAN -->
 
         <div class="logo-bar">
-          <img id="boolando-logo" src="../assets/img/boolean-logo.png" alt="boolando-logo">
+          <img src="../assets/img/boolean-logo.png" alt="boolando-logo">
 
         </div>
 
         <!-- MENU ICON -->
 
-        <div class="menu " id="menu-icon-bar">
-          <nav class="menu">
+        <div id="menu-icon-bar">
+          <nav>
             <ul>
-              <li class="icon-bar"><i class="fa-regular fa-user"></i></li>
-              <li><i class="fa-regular fa-heart"></i></li>
-              <li><i class="fa-solid fa-bag-shopping"></i></li>
+              <li v-for="item in menuIcons">
+              <a :href="item.href">{{ item.icon }}</a></li>
+              
             </ul>
 
           </nav>
@@ -62,7 +70,7 @@ header{
   top: 0;
   left: 0;
 
-  div{
+  .container{
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -78,12 +86,38 @@ header{
           display: inline-block;
           cursor: pointer; 
           padding-left: 10px; 
+
+          &hover{
+            text-decoration: underline;
+          }
           
 
         }
       }
     }
+
+    .logo-bar{
+      width: 100px;
+      img{
+       width: 100%;
+      }
     }
+
+    #menu-icon-bar {
+      nav{
+        ul{
+          li:hover{
+            text-decoration: u;
+            
+          }
+        }
+      }
+
+
+    }
+      
+    
+  }
 
   
   
