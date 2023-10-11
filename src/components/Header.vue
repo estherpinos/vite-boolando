@@ -1,13 +1,14 @@
 <script >
 
-import menuHeader from '../data/menuHeader';
+import {menuPersone, menuIcons} from '../data/menuHeader';
 
 
 export default{
   name:'Header',
   data(){
     return {
-      menuHeader
+      menuPersone,
+      menuIcons
     }
   }
   
@@ -24,7 +25,7 @@ export default{
 
       <nav>
           <ul>
-            <li v-for="item in menuHeader">
+            <li v-for="item in menuPersone">
               <a :href="item.href">{{ item.text }}</a>
             </li>
           </ul>
@@ -43,7 +44,7 @@ export default{
           <nav>
             <ul>
               <li v-for="item in menuIcons">
-              <a :href="item.href">{{ item.icon }}</a></li>
+              <a :href="item.href"><i :class="item.icon"></i></a></li>
               
             </ul>
 

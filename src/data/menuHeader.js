@@ -1,4 +1,4 @@
- export default [
+ const menuPersone =[
   {
     href:'#',
     text: 'Donna'
@@ -13,17 +13,19 @@
   }
 ]
 
-// const menuIcons= [
-//   {
-//     href:'#',
-//     icon: '<i class="fa-regular fa-user"></i>'
-//   },
-//   {
-//     href:'#',
-//     icon: '<i class="fa-regular fa-heart"></i>'
-//   },
-//   {
-//     href:'#',
-//     icon: '<i class="fa-solid fa-bag-shopping"></i>'
-//   }
-// ]
+const menuIcons= [
+ {
+   href:'#',
+   icon: 'fa-user fa-regular'
+  },
+ {
+    href:'#',
+    icon: 'fa-heart fa-solid'
+ },
+  {
+    href:'#',
+    icon: 'fa-bag-shopping fa-solid'
+}
+]
+
+export{menuPersone,menuIcons}
