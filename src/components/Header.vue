@@ -25,7 +25,7 @@ export default{
 
       <nav>
           <ul>
-            <li v-for="item in menuPersone">
+            <li v-for="(item, index) in menuPersone" :key="index">
               <a :href="item.href">{{ item.text }}</a>
             </li>
           </ul>
@@ -43,7 +43,7 @@ export default{
         <div id="menu-icon-bar">
           <nav>
             <ul>
-              <li v-for="item in menuIcons">
+              <li v-for="(item, index) in menuIcons" :key="index">
               <a :href="item.href"><i :class="item.icon"></i></a></li>
               
             </ul>
