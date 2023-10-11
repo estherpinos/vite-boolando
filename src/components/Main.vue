@@ -5,10 +5,16 @@ import menuMain from '../data/menuMain';
 
 export default{
   name:'Main',
- data(){
-  menuMain
-
- }
+  data(){
+    return{
+      menuMain
+    }   
+  },
+  methods:{
+    getImagePath(img){
+      return new URL(`../assets/img/${img}`, import.meta.url).href;
+    }
+  }
   
   
 }
@@ -17,22 +23,24 @@ export default{
 
 <template>
  <main>
+  <h1>Ciao</h1>
   <div class="container" id="container-main">
-        <div class="product">
-          <img src="../assets/img/1.webp" alt="1-wwb">
-          <span class="saldi">-50%</span>
-          <span class="sostenibilità">Sostenibilità</span>
+        <div v-for="(item, index) in menuMain" :key="index" class="product">
+          <img :src="getImagePath(item.primaryImage)">
+          
+          <span class="saldi">{{ item.discount }}</span>
+          <span class="sostenibilità">{{item.sostenibilita}}</span>
           <div class="product-2">
-            <img src="../assets/img/1b.webp" alt="1-b-web">
+            <img :src="getImagePath(item.secondaryImage)">
           </div>
           <div class="heart"><i class="fa-solid fa-heart"></i></div>
 
 
           <div class="text-foto">
-            <p class="marca">Levi´s</p>
-            <h4>RELAXED FIT TEE UNISEX</h4>
-            <span class="prezzo-saldi">14,99 &euro;</span>
-            <span class="prezzo">29,99 &euro;</span>
+            <p class="marca">{{ item.marca }}</p>
+            <h4>{{ item.modello }}</h4>
+            <span class="prezzo-saldi">{{ item.lastPrice }} &euro;</span>
+            <span class="prezzo" v-if="item.fullPrice"> {{ item.fullPrice }} &euro;</span>
 
           </div>
         </div>
