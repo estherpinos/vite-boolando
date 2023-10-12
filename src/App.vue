@@ -2,6 +2,7 @@
 import Header from './components/Header.vue';
 import Main from './components/Main.vue';
 import Footer from './components/Footer.vue';
+import productCard from './components/productCard.vue';
 
 export default{
   name:'App',
