@@ -109,7 +109,7 @@ header{
       nav{
         ul{
           li:hover{
-            text-decoration: u;
+            text-decoration: underline;
             
           }
         }

@@ -55,52 +55,67 @@ export default{
   background-color: $color-footer;
   height: 90px;
 
+    .container{
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0 auto;
+      padding-top: 30px;
+      width: 80%;
+      max-width: 1000px;
+    }
+
+      .menu-footer{
+        .text-footer{
+        top: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+      }
+
+       & ul li{
+        text-decoration: none;
+        display: inline-block;
+        padding-right: 10px;
+        color: white;
+      }
+
+      & ul li a{
+        text-decoration: none;
+        font-size: 12px;
+        color: white;
+      }
+
+      .social-footer{
+
+          & ul li {
+          display: inline-block;
+          padding-left: 5px;
+          text-decoration: none;
+          color: white
+
+        }
+
+        & li a{
+          text-decoration: none;
+          color: white;
+        }
+        
+      }
+
+    }
+
    
   }
 
-  .container{
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    margin: 0 auto;
-    padding-top: 30px;
-    width: 80%;
-    max-width: 1000px;
-  }
+  
  
   
 
-  .text-footer{
-    top: 5px;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-  }
 
-  .container ul li{
-    text-decoration: none;
-    display: inline-block;
-    padding-right: 10px;
-    color: white;
-  }
 
-  .container ul li a{
-    text-decoration: none;
-    font-size: 12px;
-    color: white;
-  }
+ 
 
-  .social-footer ul li {
-    display: inline-block;
-    padding-left: 5px;
-    text-decoration: none;
-    color: white
-
-  }
-
-  .social-footer li a{
-    text-decoration: none;
-    color: white;
-  }
+ 
   
 </style>
