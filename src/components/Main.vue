@@ -60,97 +60,99 @@ export default{
   justify-content: center;
   margin: 100px auto;
   width: 80%;
-}
 
-.product{
-  position: relative;
-}
+   .product{
+   position: relative;
 
-.product img{
-  width: 300px;
-  margin: 8px;
-}
+      & img{
+        width: 300px;
+        margin: 8px;
+      }
 
-.product-2{
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: 0.5s;
-}
+      .saldi{
+      position: absolute;
+      top: 370px;
+      z-index: 10;
+      left: 8px;
+      background-color: red;
+      color: white;
+      font-size: 10px;
+      padding: 5px 8px;
+    }
 
-.product:hover .product-2{
-  opacity: 1;
-} 
+    .sostenibilità{
+      position: absolute;
+      top: 370px;
+      z-index: 10;
+      left: 48px;
+      background-color: #007E00;
+      color: white;
+      font-size: 10px;
+      padding: 5px 8px;
+    }
 
-/* TEXT PREZZO E MARCA */
+    // HEART
+     .heart{
+      position: absolute;
+      z-index: 90;
+      top: 20px;
+      right: 9px;
+      background-color: white;
+      padding: 10px 10px;
+    }
 
-.text-foto{
-  padding-left: 8px;
-  margin-bottom: 40px;
-}
+    .heart:hover {
+      color: red;
+    }
 
-.marca{
-  font-size: 15px;
-  font-weight: lighter;
-  color: rgba(0, 0, 0, 0.616);
-  
-}
+    // PRODUCT 2
 
-.product h6{
-  font-weight: bold;
-  font-size: 20px;
+        .product-2{
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 0.5s;
+     }
+
+      &:hover .product-2{
+      opacity: 1;
+     } 
+
+        .text-foto{
+      padding-left: 8px;
+      margin-bottom: 40px;
+
+          .marca{
+          font-size: 15px;
+          font-weight: lighter;
+          color: rgba(0, 0, 0, 0.616);
+          
+        }
+
+         .prezzo-saldi{
+          color: red;
+          font-size: 15px;
+          font-weight: lighter;
+          
+            }
+
+          .prezzo{
+          text-decoration: line-through;
+          font-size: 15px;
+          font-weight: lighter;
+          color: rgba(0, 0, 0, 0.616);
+        }
+
+
+     }
+
+      & h4{
+      font-weight: bold;
+      font-size: 20px;
  
-}
+      }
+   }
+ }
 
-.prezzo-saldi{
-  color: red;
-  font-size: 15px;
-  font-weight: lighter;
-  
-}
-
-.prezzo{
-  text-decoration: line-through;
-  font-size: 15px;
-  font-weight: lighter;
-  color: rgba(0, 0, 0, 0.616);
-}
-
-/* BOX PREZZO */
-
-.saldi{
-  position: absolute;
-  top: 370px;
-  z-index: 10;
-  left: 8px;
-  background-color: red;
-  color: white;
-  font-size: 10px;
-  padding: 5px 8px;
-}
-
-.sostenibilità{
-  position: absolute;
-  top: 370px;
-  z-index: 10;
-  left: 48px;
-  background-color: #007E00;
-  color: white;
-  font-size: 10px;
-  padding: 5px 8px;
-}
-
-.heart{
-  position: absolute;
-  z-index: 90;
-  top: 20px;
-  right: 9px;
-  background-color: white;
-  padding: 10px 10px;
-}
-
- .heart:hover {
-  color: red;
-}
 </style>
